@@ -6,20 +6,21 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DatingApp.API.Controllers
 {
+    // http://localhost:5000/api/values - take the first part of the public class name which is Values
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
     {
         // GET api/values
-        [HttpGet]
+        [HttpGet] // uses HTTP verbs
         public ActionResult<IEnumerable<string>> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
         // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        [HttpGet("{id}")] 
+        public ActionResult<string> Get(int id) 
         {
             return "value";
         }
