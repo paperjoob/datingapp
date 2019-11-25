@@ -15,6 +15,8 @@ namespace DatingApp.API.Controllers
         [HttpGet] // uses HTTP verbs
         public ActionResult<IEnumerable<string>> Get()
         {
+            // if throw is used, return doesn't run
+            // throw new Exception("Test Exception"); 
             return new string[] { "value1", "value2" };
         }
 
